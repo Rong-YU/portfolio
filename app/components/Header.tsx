@@ -4,9 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { motion } from "framer-motion";
-import { Button, IconButton, Menu, MenuButton, MenuItem, MenuList, useColorMode } from "@chakra-ui/react";
-import { SunIcon, MoonIcon, HamburgerIcon } from "@chakra-ui/icons";
-
+import { useTheme } from "./ThemeProvider";
 type Props = {};
 
 type LinkItemProps = {
@@ -25,13 +23,12 @@ const LinkItem = ({ href, path, children }: LinkItemProps) => {
 
 export default function Header({}: Props) {
 	const pathName = usePathname();
-	const { colorMode, toggleColorMode } = useColorMode();
-
+	const { theme, setTheme } = useTheme();
 	return (
 		<motion.div
 			initial={{ y: -50 }}
 			animate={{ y: 0 }}
-			className="flex sticky top-0 backdrop-blur-sm mx-4 mt-2 justify-between"
+			className="flex sticky z-5 top-0 backdrop-blur-sm mx-4 mt-2 justify-between"
 		>
 			<Link className="p-2 pl-0 mx-1" href="/">
 				<p className="font-bold">Rong YU</p>
@@ -44,7 +41,16 @@ export default function Header({}: Props) {
 					<p>Contact</p>
 				</LinkItem>
 			</div>
-			<div className="flex flex-row">
+			<motion.div
+				whileTap={{ rotate: 360, scale: 1.2 }}
+				onClick={setTheme}
+				className={`rounded-full py-2 px-3 hover:cursor-pointer ${
+					theme === "light" ? "bg-blue-200" : "bg-slate-500"
+				}`}
+			>
+				{theme === "light" ? "🌝" : "🌑"}
+			</motion.div>
+			{/* <div className="flex flex-row">
 				<IconButton
 					aria-label="toggle theme"
 					onClick={toggleColorMode}
@@ -64,9 +70,9 @@ export default function Header({}: Props) {
 								<span>Guest book</span>
 							</MenuItem>
 						</MenuList>
-					</Menu>
-				</div>
-			</div>
+					</Menu> */}
+			{/* </div> */}
+			{/* </div> */}
 		</motion.div>
 	);
 }

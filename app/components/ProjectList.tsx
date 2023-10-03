@@ -1,5 +1,4 @@
 "use client";
-import { CloseButton, IconButton } from "@chakra-ui/react";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import React, { ReactNode, useState } from "react";
 
@@ -24,6 +23,7 @@ export default function ProjectList({}: Props) {
 			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-6 gap-4">
 				{items.map((item) => (
 					<motion.div
+						key={item.id}
 						className={`backdrop-blur-sm shadow-xl p-4 border border-black  ${
 							selectedId === null ? "hover:cursor-pointer" : "cursor-not-allowed"
 						}`}
@@ -45,7 +45,7 @@ export default function ProjectList({}: Props) {
 						layoutId={selectedId}
 					>
 						<div className="float-right">
-							<CloseButton size="sm" onClick={() => setSelectedId(null)} />
+							{/* <CloseButton size="sm" onClick={() => setSelectedId(null)} /> */}
 						</div>
 
 						<motion.h5>{item?.subtitle}</motion.h5>

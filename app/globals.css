@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    color: #cccccc;
+    background-color: #202023;
+}
+
+.light-mode {
+    color: #101212;
+    background-color: #ffffff;
+  }
+  .dark-mode {
+    color: #cccccc;
+    background-color: #202023;
+  }
+

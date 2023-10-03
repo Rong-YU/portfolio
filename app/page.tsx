@@ -5,15 +5,15 @@ export default function Home() {
 	return (
 		<div className="mt-10">
 			<section className="mt-5">
-				<div className="flex flex-col md:flex-row justify-end">
+				<div className="flex flex-col md:flex-row">
 					<div className="flex-col md:w-2/3 w-full mt-auto">
 						<TypeWriter></TypeWriter>
 						<h1 className="font-bold text-2xl	">Hi, I'm Rong YU</h1>
 						<h2 className="text-lg text-blue-500">A frontend engineer based in Paris!</h2>
 					</div>
-					<div className="flex md:w-1/3 w-full justify-center md:justify-end mt-4 my-2 md:m-0">
+					{/* <div className="flex md:w-1/3 w-full justify-center md:justify-end mt-4 my-2 md:m-0">
 						<div className="border-2 border-solid w-24 h-24 border-pink-300 rounded-full md:mr-4"></div>
-					</div>
+					</div> */}
 				</div>
 
 				<p className="mt-4">
