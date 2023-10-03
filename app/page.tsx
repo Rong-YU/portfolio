@@ -8,7 +8,7 @@ export default function Home() {
 				<div className="flex flex-col md:flex-row">
 					<div className="flex-col md:w-2/3 w-full mt-auto">
 						<TypeWriter></TypeWriter>
-						<h1 className="font-bold text-2xl	">Hi, I'm Rong YU</h1>
+						<h1 className="font-bold text-2xl	">{"Hi, I'm Rong YU"}</h1>
 						<h2 className="text-lg text-blue-500">A frontend engineer based in Paris!</h2>
 					</div>
 					{/* <div className="flex md:w-1/3 w-full justify-center md:justify-end mt-4 my-2 md:m-0">
@@ -52,8 +52,9 @@ export default function Home() {
 				<div className="m-4">
 					<p className="font-bold text-lg">2023 Efrei Paris, France</p>
 					<p>
-						Completed a 3 years of Engineer's Degree program, specializing in Software and Information
-						Systems.
+						{
+							"Completed a 3 years of Engineer's Degree program, specializing in Software and Information Systems."
+						}
 						<a
 							className="hover:underline text-pink-300"
 							target="_blank"
