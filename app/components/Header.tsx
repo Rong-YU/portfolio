@@ -5,6 +5,12 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "./ThemeProvider";
+import Button from "@mui/material/Button";
+import { IconButton } from "@mui/material";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import { MenuOpenOutlined } from "@mui/icons-material";
+
 type Props = {};
 
 type LinkItemProps = {
@@ -21,6 +27,44 @@ const LinkItem = ({ href, path, children }: LinkItemProps) => {
 	);
 };
 
+const NavMenu = () => {
+	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+		setAnchorEl(event.currentTarget);
+	};
+
+	const handleClose = () => {
+		setAnchorEl(null);
+	};
+
+	return (
+		<div>
+			<IconButton aria-controls="nav-menu" aria-haspopup="true" onClick={handleClick} color="inherit">
+				<MenuOpenOutlined></MenuOpenOutlined>
+			</IconButton>
+			<Menu id="nav-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
+				<MenuItem onClick={handleClose}>
+					<Link href="/">
+						<span>/</span>
+					</Link>
+				</MenuItem>
+				<MenuItem onClick={handleClose}>
+					<Link href="/works">
+						<span>Works</span>
+					</Link>
+				</MenuItem>
+
+				<MenuItem onClick={handleClose}>
+					<Link href="/guestbook">
+						<span>Guest</span>
+					</Link>
+				</MenuItem>
+			</Menu>
+		</div>
+	);
+};
+
 export default function Header({}: Props) {
 	const pathName = usePathname();
 	const { theme, setTheme } = useTheme();
@@ -28,7 +72,7 @@ export default function Header({}: Props) {
 		<motion.div
 			initial={{ y: -50 }}
 			animate={{ y: 0 }}
-			className="flex sticky z-5 top-0 backdrop-blur-sm mx-4 mt-2 justify-between"
+			className="flex sticky z-10 top-0 backdrop-blur-sm mx-4 mt-2 justify-between"
 		>
 			<Link className="p-2 pl-0 mx-1" href="/">
 				<p className="font-bold">Rong YU</p>
@@ -41,23 +85,19 @@ export default function Header({}: Props) {
 					<p>Contact</p>
 				</LinkItem>
 			</div>
-			<motion.div
-				whileTap={{ rotate: 360, scale: 1.2 }}
-				onClick={setTheme}
-				className={`rounded-full py-2 px-3 hover:cursor-pointer ${
-					theme === "light" ? "bg-blue-200" : "bg-slate-500"
-				}`}
-			>
-				{theme === "light" ? "🌝" : "🌑"}
-			</motion.div>
-			{/* <div className="flex flex-row">
-				<IconButton
-					aria-label="toggle theme"
-					onClick={toggleColorMode}
-					icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-				></IconButton>
+
+			<div className="flex flex-row">
+				<motion.div
+					whileTap={{ rotate: 360, scale: 1.2 }}
+					onClick={setTheme}
+					className={`rounded-full py-2 px-3 hover:cursor-pointer ${
+						theme === "light" ? "bg-blue-200" : "bg-slate-500"
+					}`}
+				>
+					{theme === "light" ? "🌝" : "🌑"}
+				</motion.div>
 				<div className="ml-2 md:hidden">
-					<Menu isLazy id="mobile-menu">
+					{/* <Menu isLazy id="mobile-menu">
 						<MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
 						<MenuList>
 							<MenuItem as={Link} href="/">
@@ -71,8 +111,10 @@ export default function Header({}: Props) {
 							</MenuItem>
 						</MenuList>
 					</Menu> */}
-			{/* </div> */}
-			{/* </div> */}
+					<NavMenu></NavMenu>
+					<div></div>
+				</div>
+			</div>
 		</motion.div>
 	);
 }

@@ -1,6 +1,9 @@
 "use client";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import React, { ReactNode, useState } from "react";
+import { CloseFullscreen } from "@mui/icons-material";
+import { CloseOutlined } from "@mui/icons-material";
+import { IconButton } from "@mui/material";
 
 type Props = {};
 
@@ -41,11 +44,15 @@ export default function ProjectList({}: Props) {
 			<AnimatePresence>
 				{selectedId && (
 					<motion.div
-						className="border border-black shadow-lg p-4 backdrop-blur-lg fixed w-full h-full top-0 left-0 md:w-1/3 md:h-3/6 md:left-1/3 md:top-1/4"
+						className="z-20 border border-black shadow-lg p-4 backdrop-blur-lg fixed w-full h-full top-0 left-0 md:w-1/3 md:h-3/6 md:left-1/3 md:top-1/4"
 						layoutId={selectedId}
 					>
 						<div className="float-right">
 							{/* <CloseButton size="sm" onClick={() => setSelectedId(null)} /> */}
+							<IconButton onClick={() => setSelectedId(null)} color="inherit">
+								<CloseFullscreen className="md:hidden"></CloseFullscreen>
+								<CloseOutlined className="hidden md:inline"></CloseOutlined>
+							</IconButton>
 						</div>
 
 						<motion.h5>{item?.subtitle}</motion.h5>

@@ -11,7 +11,7 @@ export default function TypeWriter({}: Props) {
 		delaySpeed: 2000,
 	});
 	return (
-		<div>
+		<div className=" inline-block h-12">
 			{text}
 			<Cursor cursorColor="#2DD4BF" cursorStyle="_"></Cursor>
 		</div>

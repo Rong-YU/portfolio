@@ -40,57 +40,59 @@ export default function Home() {
 				<h1 className="font-bold text-2xl">My journey</h1>
 				<h2 className="mt-2">Work =</h2>
 				<div className="m-4">
-					<p className="font-bold text-lg">2020 - 2023 FTL Group</p>
-					<p>
-						Working as a frontend developer.
+					<p className="font-bold text-lg">
 						<a className="hover:underline text-pink-300" target="_blank" href="https://www.group-ftl.com/">
-							FTL Group
+							2020 - 2023 FTL Group
 						</a>
 					</p>
+					<p>Working as a frontend developer.</p>
 				</div>
 				<h2 className="mt-2">Education = </h2>
 				<div className="m-4">
-					<p className="font-bold text-lg">2023 Efrei Paris, France</p>
-					<p>
-						{
-							"Completed a 3 years of Engineer's Degree program, specializing in Software and Information Systems."
-						}
+					<p className="font-bold text-lg">
 						<a
 							className="hover:underline text-pink-300"
 							target="_blank"
 							href="https://www.efrei.fr/programme-grande-ecole/cycle-ingenieur-par-apprentissage-lsi-hybride/"
 						>
-							Efrei Paris
+							2023 Efrei Paris, France
 						</a>
+					</p>
+					<p>
+						{
+							"Completed a 3 years of Engineer's Degree program, specializing in Software and Information Systems."
+						}
 					</p>
 				</div>
 
 				<div className="m-4">
-					<p className="font-bold text-lg">2022 NITech, Japan</p>
-					<p>
-						Special Graduate Research Student (SGRS), a student exchange program of 6 months, working on a
-						machine learning project (AutoML).
+					<p className="font-bold text-lg">
 						<a
 							className="hover:underline text-pink-300"
 							target="_blank"
 							href="http://www-als.ics.nitech.ac.jp/en_index.html"
 						>
-							Inatsu Lab
+							2022 Inatsu Lab, NITech, Japan
 						</a>
+					</p>
+					<p>
+						Special Graduate Research Student (SGRS), a student exchange program of 6 months, working on a
+						machine learning project (AutoML).
 					</p>
 				</div>
 				<div className="m-4">
-					<p className="font-bold text-lg">2020 University of Paris 13, France</p>
-					<p>
-						Completed a 2 year university diploma in computer science (Diplôme universitaire de technologie
-						informatique).
+					<p className="font-bold text-lg">
 						<a
 							className="hover:underline text-pink-300"
 							target="_blank"
 							href="http://odf.univ-paris13.fr/fr/offre-de-formation/feuilleter-le-catalogue-1/sciences-technologies-sante-STS/dut-CB/dut-informatique-program-vdtin-316-2.html"
 						>
-							Paris 13
+							2020 University of Paris 13, France
 						</a>
+					</p>
+					<p>
+						Completed a 2 year university diploma in computer science (Diplôme universitaire de technologie
+						informatique).
 					</p>
 				</div>
 			</section>
