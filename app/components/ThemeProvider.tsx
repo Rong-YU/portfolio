@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, createContext, useLayoutEffect, useContext } from "react";
+import React, { useState, createContext, useLayoutEffect, useContext, useEffect } from "react";
 type Props = {
 	children: React.ReactNode;
 };
@@ -8,7 +8,6 @@ export const ThemeContext = createContext({ theme: "dark", setTheme() {} });
 
 export default function ThemeProvider({ children }: Props) {
 	const [theme, setTheme] = useState("dark");
-
 	function toggleTheme() {
 		setTheme(theme === "light" ? "dark" : "light");
 	}

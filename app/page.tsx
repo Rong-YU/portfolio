@@ -1,7 +1,27 @@
 import Skill from "./components/Skill";
 import TypeWriter from "./components/TypeWriter";
+import { promises as fs } from "fs";
+import path from "path";
 
-export default function Home() {
+type skillList = {
+	[key: string]: number;
+};
+
+export default async function Home() {
+	const projectsJson = path.join(process.cwd(), "content/projects.json");
+	const res = await fs.readFile(projectsJson, "utf8");
+	const resData: Array<project> = JSON.parse(res);
+	const skills: skillList = {};
+	resData.forEach((data) => {
+		data.skill.forEach((skill) => {
+			if (skills[skill]) {
+				skills[skill] += 1;
+			} else {
+				skills[skill] = 1;
+			}
+		});
+	});
+
 	return (
 		<div className="mt-10">
 			<section className="mt-5">
@@ -25,7 +45,10 @@ export default function Home() {
 			<section className="mt-5">
 				<h1 className="font-bold text-2xl	">Skills</h1>
 				<div className="grid grid-cols-2 gap-5 md:grid-cols-4 mt-4">
-					<Skill name="javascript" numberOfRelatedProject={1}></Skill>
+					{Object.keys(skills).map((key) => {
+						return <Skill key={key} name={key} numberOfRelatedProject={skills[key]}></Skill>;
+					})}
+					{/* <Skill name="javascript" numberOfRelatedProject={1}></Skill>
 					<Skill name="Java" numberOfRelatedProject={1}></Skill>
 					<Skill name="C++" numberOfRelatedProject={1}></Skill>
 					<Skill name="javascript" numberOfRelatedProject={1}></Skill>
@@ -33,7 +56,7 @@ export default function Home() {
 					<Skill name="javascript" numberOfRelatedProject={1}></Skill>
 					<Skill name="javascript" numberOfRelatedProject={1}></Skill>
 					<Skill name="javascript" numberOfRelatedProject={1}></Skill>
-					<Skill name="javascript" numberOfRelatedProject={1}></Skill>
+					<Skill name="javascript" numberOfRelatedProject={1}></Skill> */}
 				</div>
 			</section>
 			<section className="mt-10">
