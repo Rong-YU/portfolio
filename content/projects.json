@@ -1,0 +1,41 @@
+[
+	{
+		"id": "0",
+		"name": "TWMS",
+		"description": "这是项目1的描述。",
+		"date": "2020 - 2022",
+		"missions": ["mission 1", "mission 2"],
+		"imageFolder": "",
+		"company": "FTL Group",
+		"type": "internal",
+		"link": "",
+		"github": "",
+		"skill": ["Javascript", "Vue.js", "D3.js", "Vuex", "Micro front end"]
+	},
+	{
+		"id": "1",
+		"name": "Welco",
+		"description": "这是项目1的描述。",
+		"date": "Mai. 2023 - Aug. 2023",
+		"missions": ["mission 1", "mission 2"],
+		"imageFolder": "/welco/",
+		"company": "FTL Group x Welco",
+		"type": "internal",
+		"link": "",
+		"github": "",
+		"skill": ["Flutter"]
+	},
+	{
+		"id": "2",
+		"name": "FTL Express",
+		"description": "这是项目1的描述。",
+		"date": "Mai. 2022 - Juin. 2022",
+		"missions": ["mission 1", "mission 2"],
+		"imageFolder": "/ftl-express/",
+		"company": "FTL Group",
+		"type": "internal",
+		"link": "",
+		"github": "",
+		"skill": ["Javascript", "Webflow", "jQuery", "HTML", "CSS"]
+	}
+]
