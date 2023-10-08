@@ -68,7 +68,7 @@ export default async function Home() {
 							2020 - 2023 FTL Group
 						</a>
 					</p>
-					<p>Working as a frontend developer.</p>
+					<p className="text-sm">Working as a frontend developer.</p>
 				</div>
 				<h2 className="mt-2">Education = </h2>
 				<div className="m-4">
@@ -81,7 +81,7 @@ export default async function Home() {
 							2023 Efrei Paris, France
 						</a>
 					</p>
-					<p>
+					<p className="text-sm">
 						{
 							"Completed a 3 years of Engineer's Degree program, specializing in Software and Information Systems."
 						}
@@ -98,7 +98,7 @@ export default async function Home() {
 							2022 Inatsu Lab, NITech, Japan
 						</a>
 					</p>
-					<p>
+					<p className="text-sm">
 						Special Graduate Research Student (SGRS), a student exchange program of 6 months, working on a
 						machine learning project (AutoML).
 					</p>
@@ -113,7 +113,7 @@ export default async function Home() {
 							2020 University of Paris 13, France
 						</a>
 					</p>
-					<p>
+					<p className="text-sm">
 						Completed a 2 year university diploma in computer science (Diplôme universitaire de technologie
 						informatique).
 					</p>
