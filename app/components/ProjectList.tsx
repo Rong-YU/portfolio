@@ -98,9 +98,9 @@ export default function ProjectList({ projects }: Props) {
 										modules={[Pagination, Navigation, Zoom]}
 										zoom={true}
 									>
-										{item?.imgUrls.map((url) => {
+										{item?.imgUrls.map((url, index) => {
 											return (
-												<SwiperSlide className="h-auto">
+												<SwiperSlide key={index} className="h-auto">
 													<div className="swiper-zoom-container relative flex h-full items-center justify-center">
 														<Image
 															className="object-contain"
@@ -122,8 +122,8 @@ export default function ProjectList({ projects }: Props) {
 							<div className="border p-1 shadow-lg my-2">
 								<h4>MY MISSIONS</h4>
 								<div className="flex flex-col">
-									{item?.missions.map((mission) => {
-										return <p>- {mission}</p>;
+									{item?.missions.map((mission, index) => {
+										return <p key={index}>- {mission}</p>;
 									})}
 								</div>
 							</div>

@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import Header from "./components/Header";
-// import { ChakraProvider } from "@chakra-ui/react";
 import ThemeProvider from "./components/ThemeProvider";
 
 const inter = Roboto_Mono({ subsets: ["latin"] });

@@ -3,7 +3,7 @@ type project = {
 	name: string;
 	date: string;
 	missions: Array<string>;
-	skill: Array<string>;
+	techStack: Array<string>;
 	company?: string;
 	description: string;
 	link?: string;
@@ -11,4 +11,5 @@ type project = {
 	imgUrls: Array<string>;
 	imageFolder: string;
 	type: string;
+	tools: Array<string>;
 };
