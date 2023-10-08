@@ -1,19 +1,6 @@
 [
 	{
 		"id": "0",
-		"name": "TWMS",
-		"description": "这是项目1的描述。",
-		"date": "2020 - 2022",
-		"missions": ["mission 1", "mission 2"],
-		"imageFolder": "",
-		"company": "FTL Group",
-		"type": "internal",
-		"link": "",
-		"github": "",
-		"skill": ["Javascript", "Vue.js", "D3.js", "Vuex", "Micro front end"]
-	},
-	{
-		"id": "1",
 		"name": "Welco",
 		"description": "这是项目1的描述。",
 		"date": "Mai. 2023 - Aug. 2023",
@@ -23,10 +10,11 @@
 		"type": "internal",
 		"link": "",
 		"github": "",
-		"skill": ["Flutter"]
+		"techStack": ["Flutter"],
+		"tools": ["Figma"]
 	},
 	{
-		"id": "2",
+		"id": "1",
 		"name": "FTL Express",
 		"description": "这是项目1的描述。",
 		"date": "Mai. 2022 - Juin. 2022",
@@ -36,6 +24,21 @@
 		"type": "internal",
 		"link": "",
 		"github": "",
-		"skill": ["Javascript", "Webflow", "jQuery", "HTML", "CSS"]
+		"techStack": ["Javascript", "Webflow", "jQuery", "HTML", "CSS"],
+		"tools": ["Figma"]
+	},
+	{
+		"id": "2",
+		"name": "TWMS",
+		"description": "这是项目1的描述。",
+		"date": "2020 - 2022",
+		"missions": ["mission 1", "mission 2"],
+		"imageFolder": "",
+		"company": "FTL Group",
+		"type": "internal",
+		"link": "",
+		"github": "",
+		"techStack": ["Javascript", "Vue.js", "D3.js", "Vuex", "Micro front end"],
+		"tools": ["Figma"]
 	}
 ]

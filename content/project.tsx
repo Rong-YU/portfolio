@@ -10,4 +10,5 @@ type project = {
 	github?: string;
 	imgUrls: Array<string>;
 	imageFolder: string;
+	type: string;
 };

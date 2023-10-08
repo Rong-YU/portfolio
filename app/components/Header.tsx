@@ -42,22 +42,21 @@ const NavMenu = () => {
 				<MenuOpenOutlined></MenuOpenOutlined>
 			</IconButton>
 			<Menu id="nav-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-				<MenuItem onClick={handleClose}>
-					<Link href="/">
-						<span>/</span>
-					</Link>
-				</MenuItem>
-				<MenuItem onClick={handleClose}>
-					<Link href="/works">
-						<span>Works</span>
-					</Link>
-				</MenuItem>
-
-				<MenuItem onClick={handleClose}>
-					<Link href="/guestbook">
-						<span>Guest</span>
-					</Link>
-				</MenuItem>
+				<Link href="/">
+					<MenuItem onClick={handleClose}>
+						<p>/</p>
+					</MenuItem>
+				</Link>
+				<Link href="/works">
+					<MenuItem onClick={handleClose}>
+						<p>Works</p>
+					</MenuItem>
+				</Link>
+				<Link href="/guestbook">
+					<MenuItem onClick={handleClose}>
+						<p>Guest</p>
+					</MenuItem>
+				</Link>
 			</Menu>
 		</div>
 	);
@@ -95,20 +94,6 @@ export default function Header({}: Props) {
 					{theme === "light" ? "🌝" : "🌑"}
 				</motion.div>
 				<div className="ml-2 md:hidden">
-					{/* <Menu isLazy id="mobile-menu">
-						<MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
-						<MenuList>
-							<MenuItem as={Link} href="/">
-								<span>/</span>
-							</MenuItem>
-							<MenuItem as={Link} href="/works">
-								<span>Works</span>
-							</MenuItem>
-							<MenuItem as={Link} href="/guestbook">
-								<span>Guest book</span>
-							</MenuItem>
-						</MenuList>
-					</Menu> */}
 					<NavMenu></NavMenu>
 					<div></div>
 				</div>
