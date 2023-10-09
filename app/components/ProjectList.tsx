@@ -85,7 +85,7 @@ export default function ProjectList({ projects }: Props) {
 							</motion.div>
 							{item?.imgUrls && item?.imgUrls.length > 0 && (
 								<div className="relative border shadow-lg my-2">
-									<div className="absolute text-xs ml-2 z-20 mix-blend-difference backdrop-blur-sm">
+									<div className="absolute text-xs ml-2 z-20 bg-slate-800 text-white px-1 rounded-xs">
 										Double tap to zoom
 									</div>
 									<Swiper

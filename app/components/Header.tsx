@@ -52,7 +52,7 @@ const NavMenu = () => {
 						<p>Works</p>
 					</MenuItem>
 				</Link>
-				<Link href="/guestbook">
+				<Link href="/contact">
 					<MenuItem onClick={handleClose}>
 						<p>Guest</p>
 					</MenuItem>
@@ -65,6 +65,7 @@ const NavMenu = () => {
 export default function Header({}: Props) {
 	const pathName = usePathname();
 	const { theme, setTheme } = useTheme();
+
 	return (
 		<motion.div
 			initial={{ y: -50 }}
@@ -78,7 +79,7 @@ export default function Header({}: Props) {
 				<LinkItem href="/works" path={pathName}>
 					<p>Works</p>
 				</LinkItem>
-				<LinkItem href="/guestbook" path={pathName}>
+				<LinkItem href="/contact" path={pathName}>
 					<p>Contact</p>
 				</LinkItem>
 			</div>
