@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 		if (!session) {
 			throw Error("Session not exist");
 		}
-		const existingUser = await prismadb.user.findUnique({
+		const existingUser = await prisma.user.findUnique({
 			where: {
 				email: session?.user?.email!,
 			},
