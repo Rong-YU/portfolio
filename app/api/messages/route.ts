@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import prisma from "@/libs/prismadb";
 export async function GET() {
 	try {
-		const result = await prismadb.message.findMany({
+		const result = await prisma.message.findMany({
 			include: {
 				user: true,
 			},
