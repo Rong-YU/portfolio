@@ -13,14 +13,14 @@ export default function AuthButtons({}: Props) {
 				<p>Sign in to leave a message!</p>
 
 				<div className="flex flex-row items-center justify-center gap-4">
-					<div
+					{/* <div
 						onClick={() => signIn("google", { callbackUrl: "/contact" })}
 						className="w-8 h-8 border rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
 					>
 						<FcGoogle size={16} />
-					</div>
+					</div> */}
 					<div
-						onClick={() => signIn("github", { callbackUrl: "/contact" })}
+						onClick={() => signIn("github", { callbackUrl: `${process.env.URL}/contact` })}
 						className="w-8 h-8 border rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
 					>
 						<FaGithub size={16} />
