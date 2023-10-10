@@ -34,11 +34,11 @@ export default function ProjectList({ projects }: Props) {
 					>
 						<h2 className="mb-2">{item.name}</h2>
 
-						{item.imgUrls && (
+						{/* {item.imgUrls && (
 							<div className="relative w-full h-28 mb-2">
 								<Image src={item.imgUrls[0]} alt="thumbnail" fill sizes="max-width: 300px"></Image>
 							</div>
-						)}
+						)} */}
 						<h3>{item.date}</h3>
 						<div className="flex flex-wrap mt-2 -m-1">
 							{item.techStack.map((tech) => {

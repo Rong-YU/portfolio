@@ -17,7 +17,8 @@ export default function Tech({ name, numberOfRelatedProject }: Props) {
 			className="relative hover:cursor-pointer"
 		>
 			<div>
-				{name} <span className="text-xs"> x{numberOfRelatedProject.toString()}</span>
+				{name}
+				{/* <span className="text-xs"> x{numberOfRelatedProject.toString()}</span> */}
 			</div>
 		</motion.div>
 	);

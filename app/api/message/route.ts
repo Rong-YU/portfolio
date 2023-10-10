@@ -1,16 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import serverAuth from "@/libs/serverAuth";
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "../auth/[...nextauth]/route";
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
-	try {
-		res.json(JSON.stringify({ ha: "yo" }));
-	} catch (error) {}
-}
-
-export async function POST(req: Request, res: NextApiResponse) {
+export async function POST(req: Request) {
 	try {
 		const body = await req.json();
 		if (!body.message) {

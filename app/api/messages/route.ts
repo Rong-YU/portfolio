@@ -1,10 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import serverAuth from "@/libs/serverAuth";
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "../auth/[...nextauth]/route";
-
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET() {
 	try {
 		const result = await prismadb.message.findMany({
 			include: {
@@ -14,6 +9,8 @@ export async function GET(req: NextApiRequest, res: NextApiResponse) {
 				createdAt: "desc",
 			},
 		});
-		return NextResponse.json(result);
-	} catch (error) {}
+		return NextResponse.json(result, { status: 200 });
+	} catch (error) {
+		return NextResponse.json({}, { status: 400 });
+	}
 }

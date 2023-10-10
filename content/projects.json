@@ -2,26 +2,34 @@
 	{
 		"id": "0",
 		"name": "Welco",
-		"description": "这是项目1的描述。",
+		"description": "A Flutter mobile application for the company Welco, allows users to use their homes as parcel delivery points, providing an innovative solution.",
 		"date": "Mai. 2023 - Aug. 2023",
-		"missions": ["mission 1", "mission 2"],
+		"missions": [
+			"Maintained and optimized legacy code, addressed multiple bugs",
+			"Improved scan functionality success rate, and enhanced user experience",
+			"Added new features based on Figma design specifications.",
+			"Functional testing"
+		],
 		"imageFolder": "/welco/",
 		"company": "FTL Group x Welco",
-		"type": "internal",
+		"type": "Company",
 		"link": "",
 		"github": "",
-		"techStack": ["Flutter"],
+		"techStack": ["Flutter", "Dart"],
 		"tools": ["Figma"]
 	},
 	{
 		"id": "1",
 		"name": "FTL Express",
-		"description": "这是项目1的描述。",
+		"description": "A company homepage serves as a platform for customers to gain insights into our services and products, while also offering a cost estimation feature, enhancing the overall customer experience.",
 		"date": "Mai. 2022 - Juin. 2022",
-		"missions": ["mission 1", "mission 2"],
+		"missions": [
+			"Precisely implementing the Figma design specifications",
+			"Engaging in client communication and meeting their requirements."
+		],
 		"imageFolder": "/ftl-express/",
 		"company": "FTL Group",
-		"type": "internal",
+		"type": "Company",
 		"link": "",
 		"github": "",
 		"techStack": ["Javascript", "Webflow", "jQuery", "HTML", "CSS"],
@@ -30,15 +38,19 @@
 	{
 		"id": "2",
 		"name": "TWMS",
-		"description": "这是项目1的描述。",
+		"description": "A warehouse management system designed to facilitate the processes of inbound, processing, and outbound parcel operations for company warehouse personnel, ensuring data traceability throughout the workflow.",
 		"date": "2020 - 2022",
-		"missions": ["mission 1", "mission 2"],
+		"missions": [
+			"Maintained and optimized legacy code, enhancing component architecture for improved readability and scalability. ",
+			"Developed new features, ensuring code quality and conducting functional testing. ",
+			"Collaborated closely with the product team, backend developers, and UI/UX designer."
+		],
 		"imageFolder": "",
 		"company": "FTL Group",
-		"type": "internal",
+		"type": "Company",
 		"link": "",
 		"github": "",
-		"techStack": ["Javascript", "Vue.js", "D3.js", "Vuex", "Micro front end"],
+		"techStack": ["Javascript", "Vue.js", "D3.js"],
 		"tools": ["Figma"]
 	}
 ]

@@ -37,9 +37,14 @@ export default async function page({}: Props) {
 					messages.map((message) => {
 						const timeString = new Date(message.createdAt).toLocaleString();
 						return (
-							<div className="flex items-center my-2 p-2">
+							<div key={message.id} className="flex items-center my-2 p-2">
 								<div className="mr-4">
-									<img width={32} height={32} src={message.user.image || "app/favicon.ico"}></img>
+									<img
+										width={32}
+										height={32}
+										src={message.user.image || "app/favicon.ico"}
+										alt="user avatar"
+									></img>
 								</div>
 								<div>
 									<div>
