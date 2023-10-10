@@ -20,7 +20,7 @@ export default function AuthButtons({}: Props) {
 						<FcGoogle size={16} />
 					</div> */}
 					<div
-						onClick={() => signIn("github", { callbackUrl: `${process.env.URL}/contact` })}
+						onClick={() => signIn("github", { callbackUrl: "/contact" })}
 						className="w-8 h-8 border rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
 					>
 						<FaGithub size={16} />
