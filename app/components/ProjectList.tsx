@@ -1,7 +1,6 @@
 "use client";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import React, { ReactNode, useState } from "react";
-import { CloseFullscreen } from "@mui/icons-material";
 import { CloseOutlined } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 import Image from "next/image";
@@ -11,6 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/zoom";
 import { Pagination, Navigation, Zoom } from "swiper/modules";
+import { AiOutlineLink, AiOutlineGithub } from "react-icons/ai";
 
 type Props = {
 	projects: Array<project>;
@@ -82,6 +82,22 @@ export default function ProjectList({ projects }: Props) {
 									<span>Type: </span>
 									<span className="text-sm">{item?.type}</span>
 								</div>
+								{item?.link && (
+									<div className="flex gap-2">
+										<AiOutlineLink size={20}></AiOutlineLink>
+										<a href={item.link} target="_blank" className="text-sm hover:underline">
+											{item.link}
+										</a>
+									</div>
+								)}
+								{item?.github && (
+									<div className="flex gap-2">
+										<AiOutlineGithub size={20}></AiOutlineGithub>
+										<a href={item.github} target="_blank" className="text-sm hover:underline">
+											{item.github}
+										</a>
+									</div>
+								)}
 							</motion.div>
 							{item?.imgUrls && item?.imgUrls.length > 0 && (
 								<div className="relative border shadow-lg my-2">
@@ -142,21 +158,25 @@ export default function ProjectList({ projects }: Props) {
 									})}
 								</div>
 							</div>
-							<div className="border p-1 shadow-lg my-2">
-								<h4>TOOL</h4>
-								<div className="flex flex-wrap -m-1">
-									{item?.tools.map((tool) => {
-										return (
-											<div
-												key={tool}
-												className="m-1 p-1 rounded-sm bg-purple-300 text-xs text-black"
-											>
-												{tool}
-											</div>
-										);
-									})}
+							{item?.tools && item?.tools.length > 0 ? (
+								<div className="border p-1 shadow-lg my-2">
+									<h4>TOOL</h4>
+									<div className="flex flex-wrap -m-1">
+										{item?.tools.map((tool) => {
+											return (
+												<div
+													key={tool}
+													className="m-1 p-1 rounded-sm bg-purple-300 text-xs text-black"
+												>
+													{tool}
+												</div>
+											);
+										})}
+									</div>
 								</div>
-							</div>
+							) : (
+								<div></div>
+							)}
 						</div>
 					</motion.div>
 				)}

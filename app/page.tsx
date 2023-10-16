@@ -37,13 +37,13 @@ export default async function Home() {
 				</div>
 
 				<p className="mt-4">
-					My goal is to make human-computer interaction not only more direct but also exceptionally
-					user-friendly, striving to create intuitive and seamless digital experiences that enhance the way we
-					engage with technology and simplify our lives.
+					{
+						"I'm a recent graduate focused on creating interactive and user-friendly applications. I've 3 years of experience in frontend development, proficient in HTML, CSS, and JavaScript, as well as popular frontend frameworks like React and Vue.js."
+					}
 				</p>
 			</section>
 			<section className="mt-5">
-				<h1 className="font-bold text-2xl	">Skills</h1>
+				<h1 className="font-bold text-2xl	">{"Techs I've Worked With"}</h1>
 				<div className="grid grid-cols-2 gap-5 md:grid-cols-4 mt-4">
 					{Object.keys(techStack).map((key) => {
 						return <Tech key={key} name={key} numberOfRelatedProject={techStack[key]}></Tech>;

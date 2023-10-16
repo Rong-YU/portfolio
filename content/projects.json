@@ -1,5 +1,23 @@
 [
 	{
+		"id": "3",
+		"name": "My website",
+		"description": "A personal website of mine",
+		"date": "Oct. 2023",
+		"missions": [
+			"Parctice React, learn Next.js",
+			"Added authentication using next-auth",
+			"Deploy the website using Vercel"
+		],
+		"imageFolder": "",
+		"company": "",
+		"type": "Personal",
+		"link": "https://www.ryafterlife.com/",
+		"github": "https://github.com/Rong-YU/portfolio",
+		"techStack": ["React", "Next.js", "Typescript", "Tailwind CSS", "Prisma", "MongoDB"],
+		"tools": []
+	},
+	{
 		"id": "0",
 		"name": "Welco",
 		"description": "A Flutter mobile application for the company Welco, allows users to use their homes as parcel delivery points, providing an innovative solution.",
@@ -13,10 +31,10 @@
 		"imageFolder": "/welco/",
 		"company": "FTL Group x Welco",
 		"type": "Company",
-		"link": "",
+		"link": "https://www.welco.io/",
 		"github": "",
 		"techStack": ["Flutter", "Dart"],
-		"tools": ["Figma"]
+		"tools": ["Figma", "Height", "Postman"]
 	},
 	{
 		"id": "1",
@@ -30,10 +48,10 @@
 		"imageFolder": "/ftl-express/",
 		"company": "FTL Group",
 		"type": "Company",
-		"link": "",
+		"link": "https://www.ftl-express.com/",
 		"github": "",
-		"techStack": ["Javascript", "Webflow", "jQuery", "HTML", "CSS"],
-		"tools": ["Figma"]
+		"techStack": ["JavaScript", "Webflow", "jQuery", "HTML", "CSS"],
+		"tools": ["Figma", "Jira", "Postman"]
 	},
 	{
 		"id": "2",
@@ -50,7 +68,7 @@
 		"type": "Company",
 		"link": "",
 		"github": "",
-		"techStack": ["Javascript", "Vue.js", "D3.js"],
-		"tools": ["Figma"]
+		"techStack": ["JavaScript", "Vue.js", "D3.js"],
+		"tools": ["Figma", "Jira", "Postman"]
 	}
 ]

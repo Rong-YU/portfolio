@@ -54,7 +54,7 @@ const NavMenu = () => {
 				</Link>
 				<Link href="/contact">
 					<MenuItem onClick={handleClose}>
-						<p>Guest</p>
+						<p>Contact</p>
 					</MenuItem>
 				</Link>
 			</Menu>
@@ -85,7 +85,7 @@ export default function Header({}: Props) {
 			</div>
 
 			<div className="flex flex-row">
-				<motion.div
+				{/* <motion.div
 					whileTap={{ rotate: 360, scale: 1.2 }}
 					onClick={setTheme}
 					className={`rounded-full py-2 px-3 hover:cursor-pointer ${
@@ -93,7 +93,7 @@ export default function Header({}: Props) {
 					}`}
 				>
 					{theme === "light" ? "🌝" : "🌑"}
-				</motion.div>
+				</motion.div> */}
 				<div className="ml-2 md:hidden">
 					<NavMenu></NavMenu>
 					<div></div>
